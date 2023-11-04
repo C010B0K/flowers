@@ -4,13 +4,7 @@ import FlowersService from "@/api/FlowersServise";
 export function useGetDataFLowers() {
   return useQuery(
     ['getFlowers'],
-    async () => {
-    const response = await FlowersService.FlowersGetService({});
-    return response.data;
-    },
-    {
-      keepPreviousData: true,
-      //  Здесь пихаем опции
+    async () => { const response = await FlowersService.FlowersGetService({}); return response.data;
     }
   );
 }
